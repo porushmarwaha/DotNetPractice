@@ -7,14 +7,14 @@ namespace Dotnet {
 
 			char[] balanced = { '{', '[', ']', '{', '}', '(', '{', '}', ')', '}' };
 			char[] unbalanced = { '{', '}', '(', '{', '(', '}', ')', ')' };
-			char[] test = {};
-			// Console.WriteLine ("String - {0}" ,CheckBalanceOrUnbalanceString (balanced));
-			// Console.WriteLine ("String - {0}" ,CheckBalanceOrUnbalanceString (unbalanced));
-			Console.WriteLine(CheckBalanceOrUnbalanceString(test));
+			
+			Console.WriteLine ("String - {0}" ,CheckBalanceOrUnbalanceString (balanced));
+			Console.WriteLine ("String - {0}" ,CheckBalanceOrUnbalanceString (unbalanced));
 
 		}
 		private static string CheckBalanceOrUnbalanceString (char[] brackets) {
-			char[] bracketIndex = { '[', ']', '{', '}', '(', ')' };
+			if(brackets.Length ==0) return "No Elements in the array";
+			char[] bracketIndex = { '[', ']', '{', '}', '(', ')' }; 
 			Stack<char> bracketStack = new Stack<char> ();
 			foreach (char bracket in brackets) {
 				
