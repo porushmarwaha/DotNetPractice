@@ -5,17 +5,19 @@ namespace Dotnet {
 	class Program {
 		static void Main (string[] args) {
 
+			//Problem 3
+
 			List<string> listOfSpells = new List<string> () { "Accio", "Expecto Patronum", "Petrificus Totalus", "Muffliato" };
 			string rememberSpell = "tr";
 			List<string> returnedSpells = new List<string> ();
-			if(rememberSpell != ""){
+			if (rememberSpell != "") {
 				listOfSpells.ForEach (element => {
-					if (element.Contains(rememberSpell) == true) returnedSpells.Add(element);
+					if (element.Contains (rememberSpell) == true) returnedSpells.Add (element);
 				});
 				returnedSpells.ForEach (element => Console.WriteLine (element));
-			}
-			else{	Console.WriteLine ("Spell Does not Exist"); }
+			} else { Console.WriteLine ("Spell Does not Exist"); }
 
+			//Problrem 4
 			string message = "Have you finished your warewolves essay? ";
 			string secretMessage = message
 				.Replace ('a', '@')
@@ -24,7 +26,7 @@ namespace Dotnet {
 				.Replace ('o', '?')
 				.Replace ('u', '&');
 			Console.WriteLine (secretMessage);
-	}
+		}
 
-}
+	}
 }
