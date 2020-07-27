@@ -38,10 +38,10 @@ namespace Dotnet {
 						bracket == bracketIndex[5]))
 					return "UnBalanced";
 
-				// Empty List and First Character
+				// First Character in Empty List
 				if (bracketStack.Count == 0) { bracketStack.Push (bracket); continue; };
 
-				// Empty List and First Character
+				//checking bracket is open Bracket  
 				if (bracket == bracketIndex[0] ||
 					bracket == bracketIndex[2] ||
 					bracket == bracketIndex[4]) {
