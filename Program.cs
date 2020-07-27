@@ -7,9 +7,25 @@ namespace Dotnet {
 
 			char[] balanced = { '{', '[', ']', '{', '}', '(', '{', '}', ')', '}' };
 			char[] unbalanced = { '{', '}', '(', '{', '(', '}', ')', ')' };
+			char[] CaseOne = {'{', '[', ']', '{', '}', '(', '{', '}', ')', '}'};
+			char[] CaseTwo = {'{', '}', '(', '{', '(', '}', ')', ')'};
+			char[] CaseThree = {};
+			char[] CaseFour = {'1','2','3'};
+			char[] CaseFive = {'a','b'};
+			char[] CaseSix = {']','['};
+			char[] CaseSeven = {'[','{','('};
+			char[] CaseEight = {'[','{','}'};
 
-			Console.WriteLine ("String - {0}", CheckBalanceOrUnbalanceString (balanced));
-			Console.WriteLine ("String - {0}", CheckBalanceOrUnbalanceString (unbalanced));
+			Console.WriteLine ("Balanced -   {0}", CheckBalanceOrUnbalanceString (balanced));
+			Console.WriteLine ("UnBalanced - {0}", CheckBalanceOrUnbalanceString (unbalanced));
+			Console.WriteLine ("CaseOne -    {0}", CheckBalanceOrUnbalanceString (CaseOne));
+			Console.WriteLine ("CaseTwo -    {0}", CheckBalanceOrUnbalanceString (CaseTwo));
+			Console.WriteLine ("CaseThree -  {0}", CheckBalanceOrUnbalanceString (CaseThree));
+			Console.WriteLine ("CaseFour -   {0}", CheckBalanceOrUnbalanceString (CaseFour));
+			Console.WriteLine ("CaseFive -   {0}", CheckBalanceOrUnbalanceString (CaseFive));
+			Console.WriteLine ("CaseSix -    {0}", CheckBalanceOrUnbalanceString (CaseSix));
+			Console.WriteLine ("CaseSeven -  {0}", CheckBalanceOrUnbalanceString (CaseSeven));
+			Console.WriteLine ("CaseEight -  {0}", CheckBalanceOrUnbalanceString (CaseEight));
 		}
 		private static string CheckBalanceOrUnbalanceString (char[] brackets) {
 			if (brackets.Length == 0) return "No Elements in the array";
