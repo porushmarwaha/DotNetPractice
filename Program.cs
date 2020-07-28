@@ -11,7 +11,7 @@ namespace Dotnet {
 			List<string> returnedSpells = new List<string> ();
 			if (rememberSpell != "") {
 				listOfSpells.ForEach (element => {
-					if (element.Contains (rememberSpell) == true) returnedSpells.Add (element);
+					if (element.Contains (rememberSpell)) returnedSpells.Add (element);
 				});
 				if(returnedSpells.Count == 0 ) returnedSpells.Add("Mischief Mangaed");
 				returnedSpells.ForEach (element => Console.WriteLine (element));
