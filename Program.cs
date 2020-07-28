@@ -7,15 +7,13 @@ namespace Dotnet {
 
 			//Problem 3
 			List<string> listOfSpells = new List<string> () { "Accio", "Expecto Patronum", "Petrificus Totalus", "Muffliato" };
-			string rememberSpell = Console.ReadLine();
 			List<string> returnedSpells = new List<string> ();
-			if (rememberSpell != "") {
-				listOfSpells.ForEach (element => {
-					if (element.Contains (rememberSpell)) returnedSpells.Add (element);
+			string rememberSpell = Console.ReadLine();
+			listOfSpells.ForEach (element => {
+				if (element.Contains (rememberSpell )) returnedSpells.Add (element);
 				});
-				if(returnedSpells.Count == 0 ) returnedSpells.Add("Mischief Mangaed");
-				returnedSpells.ForEach (element => Console.WriteLine (element));
-			} else {	Console.WriteLine("Empty String");	}
+			if (returnedSpells.Count == 0) returnedSpells.Add ("Mischief Mangaed");
+			returnedSpells.ForEach (element => Console.WriteLine (element));
 
 			//Problrem 4
 			string secretMessage = Console.ReadLine ()
